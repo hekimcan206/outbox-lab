@@ -1,0 +1,172 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  DOTNET_NOLOGO: true
+  DOTNET_CLI_TELEMETRY_OPTOUT: true
+  NUGET_PACKAGES: ${{ github.workspace }}/.nuget/packages
+
+jobs:
+  build-test:
+    name: build & test (unit + PostgreSQL)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-dotnet@v6
+        with:
+          global-json-file: global.json
+
+      - uses: actions/cache@v6
+        with:
+          path: ${{ env.NUGET_PACKAGES }}
+          key: nuget-${{ runner.os }}-${{ hashFiles('Directory.Packages.props', '**/*.csproj', 'global.json') }}
+          restore-keys: nuget-${{ runner.os }}-
+
+      - name: Restore
+        run: dotnet restore
+
+      # Package versions are pinned and updated by hand, so a known vulnerability in any direct or
+      # transitive package fails the build. Fix it with a pinned upgrade in Directory.Packages.props.
+      - name: Audit for vulnerable packages
+        run: |
+          set -o pipefail
+          dotnet list package --vulnerable --include-transitive 2>&1 | tee vulnerable-packages.txt
+          if grep -q "has the following vulnerable packages" vulnerable-packages.txt; then
+            echo "::error::Known-vulnerable NuGet packages found (see the list above)"
+            exit 1
+          fi
+
+      - name: Format check
+        run: dotnet format --verify-no-changes --no-restore
+
+      - name: Build (warnings are errors)
+        run: dotnet build --no-restore --configuration Release
+
+      # Unit, property and golden tests, then every PostgreSQL strategy against postgres:17-alpine through
+      # Testcontainers (wal_level=logical, the same init script as docker compose). The Oracle tests skip here
+      # unless OUTBOX_ORACLE_TESTS=1; they run in their own job below.
+      - name: Test
+        run: >
+          dotnet test --no-build --configuration Release
+          --coverage --coverage-output-format cobertura
+          --results-directory "${{ github.workspace }}/TestResults"
+
+      - name: Coverage summary
+        if: always()
+        uses: danielpalme/ReportGenerator-GitHub-Action@5.5.12
+        with:
+          reports: TestResults/**/*.cobertura.xml
+          targetdir: coverage
+          reporttypes: MarkdownSummaryGithub
+          assemblyfilters: "-*Tests*"
+          filefilters: "-*/obj/*"
+
+      - name: Publish coverage to job summary
+        if: always()
+        run: |
+          if [ -f coverage/SummaryGithub.md ]; then
+            cat coverage/SummaryGithub.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "No coverage report produced."
+          fi
+
+      - uses: actions/upload-artifact@v7
+        if: failure()
+        with:
+          name: test-results
+          path: TestResults/
+          retention-days: 7
+
+  # Oracle Database 23ai Free (gvenzl/oracle-free:23-slim-faststart, 6.5 GB image, about 2.5 GB of memory):
+  # SKIP LOCKED cursor relay, Advanced Queuing, the ROWNUM pitfall, crash redelivery and privileges.
+  oracle:
+    name: Oracle tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-dotnet@v6
+        with:
+          global-json-file: global.json
+
+      - uses: actions/cache@v6
+        with:
+          path: ${{ env.NUGET_PACKAGES }}
+          key: nuget-${{ runner.os }}-${{ hashFiles('Directory.Packages.props', '**/*.csproj', 'global.json') }}
+          restore-keys: nuget-${{ runner.os }}-
+
+      - name: Pull the Oracle image
+        run: docker pull --quiet gvenzl/oracle-free:23-slim-faststart
+
+      - name: Build
+        run: dotnet build tests/OutboxLab.OracleTests --configuration Release
+
+      - name: Oracle tests
+        env:
+          OUTBOX_ORACLE_TESTS: "1"
+        run: dotnet test --project tests/OutboxLab.OracleTests --no-build --configuration Release
+
+  container:
+    name: container image
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: docker/setup-buildx-action@v4
+
+      - name: Build image
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          push: false
+          load: true
+          tags: outbox-lab:ci
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Verify the image runs as non-root
+        run: |
+          user=$(docker image inspect outbox-lab:ci --format '{{.Config.User}}')
+          echo "Configured user: ${user}"
+          test -n "${user}" && test "${user}" != "0" && test "${user}" != "root"
+
+  compose-demo:
+    name: docker compose demo
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v7
+
+      # The README promises `docker compose up` runs the whole comparison with zero manual steps; this job keeps it
+      # true. The lab exits non-zero if any strategy loses a message or an ordered strategy reorders one.
+      - name: Start the stack
+        run: docker compose up -d --build
+
+      - name: The demo runs every strategy and every promise holds
+        run: |
+          code=$(docker wait "$(docker compose ps -aq lab)")
+          docker compose logs --no-log-prefix lab | tee demo.log
+          test "${code}" = "0"
+          grep -q '"ok":true' demo.log
+          grep -q '^| pg-logical | PostgreSQL ' demo.log
+          grep -q '^| ora-aq | Oracle ' demo.log
+
+      - name: Logs on failure
+        if: failure()
+        run: docker compose logs
