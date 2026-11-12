@@ -254,6 +254,17 @@ public sealed class ScenarioRunner(ScenarioSettings settings, Action<string>? lo
         var first = await Task.WhenAny(bodyTask, relayTask).ConfigureAwait(false);
         if (first == relayTask)
         {
+            // Stop the producers too: left running, they would keep writing into the next scenario's outbox.
+            await relayCts.CancelAsync().ConfigureAwait(false);
+            try
+            {
+                await bodyTask.ConfigureAwait(false);
+            }
+            catch (Exception) when (relayCts.IsCancellationRequested)
+            {
+                // Expected: cancelled above; the relay failure below is the error worth reporting.
+            }
+
             await relayTask.ConfigureAwait(false); // rethrows the relay failure
             throw new InvalidOperationException($"{strategy.Id}: relay stopped before the scenario finished.");
         }
