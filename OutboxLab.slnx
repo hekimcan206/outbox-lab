@@ -3,6 +3,7 @@
     <Project Path="src/OutboxLab.Core/OutboxLab.Core.csproj" />
     <Project Path="src/OutboxLab.Postgres/OutboxLab.Postgres.csproj" />
     <Project Path="src/OutboxLab.Oracle/OutboxLab.Oracle.csproj" />
+    <Project Path="src/OutboxLab.Runner/OutboxLab.Runner.csproj" />
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/OutboxLab.UnitTests/OutboxLab.UnitTests.csproj" />

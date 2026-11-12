@@ -1,0 +1,81 @@
+# docker compose up
+#   postgres  PostgreSQL 17, wal_level=logical; deploy/postgres/init creates the schema and the app/relay roles
+#   oracle    Oracle Database 23ai Free; deploy/oracle/init creates the users, tables and the AQ queue
+#   lab       runs `outbox-lab demo`: every strategy at demo scale, prints the comparison tables and a JSON verdict
+#             ({"ok":true,...}) and exits non-zero if a strategy broke its promise.
+#
+# Benchmarks run from the host against the same two databases:
+#   docker compose up -d postgres oracle
+#   dotnet run -c Release --project src/OutboxLab.Runner -- bench all --runs 3 --out benchmark-results
+#
+# Both databases are limited to 2 CPUs: Oracle Database Free caps itself at 2 CPU threads, so PostgreSQL gets the
+# same budget to keep the comparison fair. Host ports are loopback-only and deliberately unusual.
+name: outbox-lab
+
+x-dev-secrets: &dev-secrets
+  POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres-dev-only}
+  APP_PASSWORD: ${APP_PASSWORD:-app-dev-only}
+  RELAY_PASSWORD: ${RELAY_PASSWORD:-relay-dev-only}
+  ORA_OWNER_PASSWORD: ${ORA_OWNER_PASSWORD:-OwnerDev1}
+  ORA_APP_PASSWORD: ${ORA_APP_PASSWORD:-AppDev1}
+  ORA_RELAY_PASSWORD: ${ORA_RELAY_PASSWORD:-RelayDev1}
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    command: ["postgres", "-c", "wal_level=logical", "-c", "max_replication_slots=4", "-c", "max_wal_senders=4", "-c", "max_connections=300"]
+    environment:
+      <<: *dev-secrets
+      POSTGRES_DB: outbox
+    volumes:
+      - ./deploy/postgres/init:/docker-entrypoint-initdb.d:ro
+    ports:
+      - "127.0.0.1:${PG_PORT:-57432}:5432"
+    cpus: 2
+    mem_limit: 1g
+    shm_size: 256m
+    healthcheck:
+      test: ["CMD-SHELL", "psql -U postgres -d outbox -tAc \"SELECT 1 FROM pg_roles WHERE rolname = 'outbox_relay'\" | grep -q 1"]
+      interval: 2s
+      timeout: 5s
+      retries: 60
+
+  oracle:
+    image: gvenzl/oracle-free:23-slim-faststart
+    environment:
+      ORACLE_PASSWORD: ${ORACLE_PASSWORD:-sys-dev-only}
+      OWNER_PASSWORD: ${ORA_OWNER_PASSWORD:-OwnerDev1}
+      APP_PASSWORD: ${ORA_APP_PASSWORD:-AppDev1}
+      RELAY_PASSWORD: ${ORA_RELAY_PASSWORD:-RelayDev1}
+    volumes:
+      - ./deploy/oracle/init:/container-entrypoint-initdb.d:ro
+    ports:
+      - "127.0.0.1:${ORACLE_PORT:-57521}:1521"
+    cpus: 2
+    mem_limit: 3g
+    healthcheck:
+      test: ["CMD", "healthcheck.sh"]
+      interval: 5s
+      timeout: 5s
+      retries: 60
+      start_period: 10s
+
+  lab:
+    image: outbox-lab:local
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ["demo"]
+    environment:
+      <<: *dev-secrets
+      OUTBOX_PG_HOST: postgres
+      OUTBOX_PG_PORT: "5432"
+      OUTBOX_ORA_HOST: oracle
+      OUTBOX_ORA_PORT: "1521"
+      OTEL_EXPORTER_OTLP_ENDPOINT: ${OTEL_EXPORTER_OTLP_ENDPOINT:-}
+    depends_on:
+      postgres:
+        condition: service_healthy
+      oracle:
+        condition: service_healthy
+    restart: "no"
