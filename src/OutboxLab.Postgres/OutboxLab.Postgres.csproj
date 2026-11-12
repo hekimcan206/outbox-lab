@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>PostgreSQL outbox strategies: FOR UPDATE SKIP LOCKED polling, LISTEN/NOTIFY wake-up, commit-horizon (xmin) cursor, naive id cursor and logical decoding (pgoutput).</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Npgsql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OutboxLab.Core\OutboxLab.Core.csproj" />
+  </ItemGroup>
+
+</Project>
