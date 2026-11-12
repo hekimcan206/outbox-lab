@@ -1,0 +1,1556 @@
+{
+  "generatedUtc": "2026-11-12T11:08:41.9862888Z",
+  "runsPerConfiguration": 3,
+  "medians": [
+    {
+      "Scenario": "latency",
+      "Strategy": "pg-skip-locked",
+      "Engine": "PostgreSQL",
+      "Workers": 1,
+      "Producers": 4,
+      "Messages": 1700,
+      "DurationSeconds": 17,
+      "ThroughputPerSecond": 99.82029997291934,
+      "OfferedRatePerSecond": 100,
+      "Latency": {
+        "Count": 1502,
+        "P50": 68.8049,
+        "P95": 126.6749,
+        "P99": 157.5685,
+        "Max": 245.0518,
+        "Mean": 72.39390632490012
+      },
+      "Ordering": {
+        "Delivered": 1700,
+        "Unique": 1700,
+        "Duplicates": 0,
+        "Missing": 0,
+        "Inversions": 0,
+        "AggregatesWithInversion": 0,
+        "LossFree": true,
+        "InOrder": true
+      },
+      "Notes": "poll/wait 100 ms"
+    },
+    {
+      "Scenario": "latency",
+      "Strategy": "pg-notify",
+      "Engine": "PostgreSQL",
+      "Workers": 1,
+      "Producers": 4,
+      "Messages": 1700,
+      "DurationSeconds": 17,
+      "ThroughputPerSecond": 99.84962118433998,
+      "OfferedRatePerSecond": 100,
+      "Latency": {
+        "Count": 1501,
+        "P50": 5.9906,
+        "P95": 13.1495,
+        "P99": 25.5862,
+        "Max": 91.0849,
+        "Mean": 7.269876282478348
+      },
+      "Ordering": {
+        "Delivered": 1700,
+        "Unique": 1700,
+        "Duplicates": 0,
+        "Missing": 0,
+        "Inversions": 0,
+        "AggregatesWithInversion": 0,
+        "LossFree": true,
+        "InOrder": true
+      },
+      "Notes": "poll/wait 100 ms"
+    },
+    {
+      "Scenario": "latency",
+      "Strategy": "pg-xmin",
+      "Engine": "PostgreSQL",
+      "Workers": 1,
+      "Producers": 4,
+      "Messages": 1700,
+      "DurationSeconds": 17,
+      "ThroughputPerSecond": 99.86480302965845,
+      "OfferedRatePerSecond": 100,
+      "Latency": {
+        "Count": 1501,
+        "P50": 63.4082,
+        "P95": 109.9005,
+        "P99": 122.2406,
+        "Max": 153.772,
+        "Mean": 64.60819999999991
+      },
+      "Ordering": {
+        "Delivered": 1700,
+        "Unique": 1700,
+        "Duplicates": 0,
+        "Missing": 0,
+        "Inversions": 0,
+        "AggregatesWithInversion": 0,
+        "LossFree": true,
+        "InOrder": true
+      },
+      "Notes": "poll/wait 100 ms"
+    },
+    {
+      "Scenario": "latency",
+      "Strategy": "pg-logical",
+      "Engine": "PostgreSQL",
+      "Workers": 1,
+      "Producers": 4,
+      "Messages": 1700,
+      "DurationSeconds": 17,
+      "ThroughputPerSecond": 99.83892457738918,
+      "OfferedRatePerSecond": 100,
+      "Latency": {
+        "Count": 1501,
+        "P50": 4.2212,
+        "P95": 7.4929,
+        "P99": 17.6874,
+        "Max": 35.7013,
+        "Mean": 4.732943237841444
+      },
+      "Ordering": {
+        "Delivered": 1700,
+        "Unique": 1700,
+        "Duplicates": 0,
+        "Missing": 0,
+        "Inversions": 0,
+        "AggregatesWithInversion": 0,
+        "LossFree": true,
+        "InOrder": true
+      },
+      "Notes": "poll/wait 100 ms"
+    },
+    {
+      "Scenario": "latency",
+      "Strategy": "ora-skip-locked",
+      "Engine": "Oracle",
+      "Workers": 1,
+      "Producers": 4,
+      "Messages": 1700,
+      "DurationSeconds": 17,
+      "ThroughputPerSecond": 99.82734215233128,
+      "OfferedRatePerSecond": 100,
+      "Latency": {
+        "Count": 1502,
+        "P50": 64.682,
+        "P95": 124.1635,
+        "P99": 135.4036,
+        "Max": 187.1432,
+        "Mean": 68.48894027962717
+      },
+      "Ordering": {
+        "Delivered": 1700,
+        "Unique": 1700,
+        "Duplicates": 0,
+        "Missing": 0,
+        "Inversions": 0,
+        "AggregatesWithInversion": 0,
+        "LossFree": true,
+        "InOrder": true
+      },
+      "Notes": "poll/wait 100 ms"
+    },
+    {
+      "Scenario": "latency",
+      "Strategy": "ora-aq",
+      "Engine": "Oracle",
+      "Workers": 1,
+      "Producers": 4,
+      "Messages": 1700,
+      "DurationSeconds": 17,
+      "ThroughputPerSecond": 99.84287667766132,
+      "OfferedRatePerSecond": 100,
+      "Latency": {
+        "Count": 1501,
+        "P50": 4.3657,
+        "P95": 12.853,
+        "P99": 33.6372,
+        "Max": 52.0264,
+        "Mean": 5.88227448367755
+      },
+      "Ordering": {
+        "Delivered": 1700,
+        "Unique": 1700,
+        "Duplicates": 0,
+        "Missing": 0,
+        "Inversions": 0,
+        "AggregatesWithInversion": 0,
+        "LossFree": true,
+        "InOrder": true
+      },
+      "Notes": "poll/wait 100 ms"
+    },
+    {
+      "Scenario": "latency",
+      "Strategy": "pg-skip-locked",
+      "Engine": "PostgreSQL",
+      "Workers": 1,
+      "Producers": 4,
+      "Messages": 8500,
+      "DurationSeconds": 17,
+      "ThroughputPerSecond": 499.12517449856506,
+      "OfferedRatePerSecond": 500,
+      "Latency": {
+        "Count": 7503,
+        "P50": 63.8916,
+        "P95": 112.9339,
+        "P99": 125.793,
+        "Max": 141.6011,
+        "Mean": 64.45434498200686
+      },
+      "Ordering": {
+        "Delivered": 8500,
+        "Unique": 8500,
+        "Duplicates": 0,
+        "Missing": 0,
+        "Inversions": 0,
+        "AggregatesWithInversion": 0,
+        "LossFree": true,
+        "InOrder": true
+      },
+      "Notes": "poll/wait 100 ms"
+    },
+    {
+      "Scenario": "latency",
+      "Strategy": "pg-notify",
+      "Engine": "PostgreSQL",
+      "Workers": 1,
+      "Producers": 4,
+      "Messages": 8500,
+      "DurationSeconds": 17,
+      "ThroughputPerSecond": 327.8249245513829,
+      "OfferedRatePerSecond": 500,
+      "Latency": {
+        "Count": 8227,
+        "P50": 10.7501,
+        "P95": 33.9721,
+        "P99": 52.0725,
+        "Max": 1856.0347,
+        "Mean": 15.370190835055269
+      },
+      "Ordering": {
+        "Delivered": 8500,
+        "Unique": 8500,
+        "Duplicates": 0,
+        "Missing": 0,
+        "Inversions": 0,
+        "AggregatesWithInversion": 0,
+        "LossFree": true,
+        "InOrder": true
+      },
+      "Notes": "poll/wait 100 ms"
+    },
+    {
+      "Scenario": "latency",
+      "Strategy": "pg-xmin",
+      "Engine": "PostgreSQL",
+      "Workers": 1,
+      "Producers": 4,
+      "Messages": 8500,
+      "DurationSeconds": 17,
+      "ThroughputPerSecond": 499.61439467128446,
+      "OfferedRatePerSecond": 500,
+      "Latency": {
+        "Count": 7968,
+        "P50": 63.404,
+        "P95": 113.5174,
+        "P99": 128.1023,
+        "Max": 527.6946,
+        "Mean": 64.94355741716865
+      },
+      "Ordering": {
+        "Delivered": 8500,
+        "Unique": 8500,
+        "Duplicates": 0,
+        "Missing": 0,
+        "Inversions": 0,
+        "AggregatesWithInversion": 0,
+        "LossFree": true,
+        "InOrder": true
+      },
+      "Notes": "poll/wait 100 ms"
+    },
+    {
+      "Scenario": "latency",
+      "Strategy": "pg-logical",
+      "Engine": "PostgreSQL",
+      "Workers": 1,
+      "Producers": 4,
+      "Messages": 8500,
+      "DurationSeconds": 17,
+      "ThroughputPerSecond": 499.35277124896874,
+      "OfferedRatePerSecond": 500,
+      "Latency": {
+        "Count": 7636,
+        "P50": 6.0132,
+        "P95": 13.9897,
+        "P99": 30.1759,
+        "Max": 376.8936,
+        "Mean": 7.742051794133053
+      },
+      "Ordering": {
+        "Delivered": 8500,
+        "Unique": 8500,
+        "Duplicates": 0,
+        "Missing": 0,
+        "Inversions": 0,
+        "AggregatesWithInversion": 0,
+        "LossFree": true,
+        "InOrder": true
+      },
+      "Notes": "poll/wait 100 ms"
+    },
+    {
+      "Scenario": "latency",
+      "Strategy": "ora-skip-locked",
+      "Engine": "Oracle",
+      "Workers": 1,
+      "Producers": 4,
+      "Messages": 8500,
+      "DurationSeconds": 17,
+      "ThroughputPerSecond": 494.49058083579183,
+      "OfferedRatePerSecond": 500,
+      "Latency": {
+        "Count": 7504,
+        "P50": 68.0352,
+        "P95": 125.1108,
+        "P99": 181.8192,
+        "Max": 300.6669,
+        "Mean": 70.35708122334746
+      },
+      "Ordering": {
+        "Delivered": 8500,
+        "Unique": 8500,
+        "Duplicates": 0,
+        "Missing": 0,
+        "Inversions": 0,
+        "AggregatesWithInversion": 0,
+        "LossFree": true,
+        "InOrder": true
+      },
+      "Notes": "poll/wait 100 ms"
+    },
+    {
+      "Scenario": "latency",
+      "Strategy": "ora-aq",
+      "Engine": "Oracle",
+      "Workers": 1,
+      "Producers": 4,
+      "Messages": 8500,
+      "DurationSeconds": 17,
+      "ThroughputPerSecond": 498.9138996578965,
+      "OfferedRatePerSecond": 500,
+      "Latency": {
+        "Count": 7508,
+        "P50": 7.1116,
+        "P95": 16.5942,
+        "P99": 28.8601,
+        "Max": 233.3997,
+        "Mean": 8.785676265316994
+      },
+      "Ordering": {
+        "Delivered": 8500,
+        "Unique": 8500,
+        "Duplicates": 0,
+        "Missing": 0,
+        "Inversions": 0,
+        "AggregatesWithInversion": 0,
+        "LossFree": true,
+        "InOrder": true
+      },
+      "Notes": "poll/wait 100 ms"
+    }
+  ],
+  "runs": [
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "pg-skip-locked",
+        "Engine": "PostgreSQL",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 1700,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 99.82029997291934,
+        "OfferedRatePerSecond": 100,
+        "Latency": {
+          "Count": 1502,
+          "P50": 68.8049,
+          "P95": 126.6749,
+          "P99": 157.5685,
+          "Max": 245.0518,
+          "Mean": 72.39390632490012
+        },
+        "Ordering": {
+          "Delivered": 1700,
+          "Unique": 1700,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "pg-skip-locked",
+        "Engine": "PostgreSQL",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 1700,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 99.89457009549098,
+        "OfferedRatePerSecond": 100,
+        "Latency": {
+          "Count": 1502,
+          "P50": 70.2813,
+          "P95": 126.3972,
+          "P99": 159.9705,
+          "Max": 478.7834,
+          "Mean": 72.65514707057261
+        },
+        "Ordering": {
+          "Delivered": 1700,
+          "Unique": 1700,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "pg-skip-locked",
+        "Engine": "PostgreSQL",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 1700,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 99.85197062827265,
+        "OfferedRatePerSecond": 100,
+        "Latency": {
+          "Count": 1501,
+          "P50": 63.9869,
+          "P95": 123.0581,
+          "P99": 128.2604,
+          "Max": 159.3591,
+          "Mean": 67.41307968021319
+        },
+        "Ordering": {
+          "Delivered": 1700,
+          "Unique": 1700,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "pg-notify",
+        "Engine": "PostgreSQL",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 1700,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 99.84962118433998,
+        "OfferedRatePerSecond": 100,
+        "Latency": {
+          "Count": 1501,
+          "P50": 5.9906,
+          "P95": 13.1495,
+          "P99": 25.5862,
+          "Max": 91.0849,
+          "Mean": 7.269876282478348
+        },
+        "Ordering": {
+          "Delivered": 1700,
+          "Unique": 1700,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "pg-notify",
+        "Engine": "PostgreSQL",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 1700,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 99.9096734273662,
+        "OfferedRatePerSecond": 100,
+        "Latency": {
+          "Count": 1501,
+          "P50": 5.1505,
+          "P95": 8.3505,
+          "P99": 12.2084,
+          "Max": 35.4114,
+          "Mean": 5.746229113924052
+        },
+        "Ordering": {
+          "Delivered": 1700,
+          "Unique": 1700,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "pg-notify",
+        "Engine": "PostgreSQL",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 1700,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 99.89659644539233,
+        "OfferedRatePerSecond": 100,
+        "Latency": {
+          "Count": 1501,
+          "P50": 6.9272,
+          "P95": 22.3029,
+          "P99": 40.8035,
+          "Max": 62.8969,
+          "Mean": 9.186440506329099
+        },
+        "Ordering": {
+          "Delivered": 1700,
+          "Unique": 1700,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "pg-xmin",
+        "Engine": "PostgreSQL",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 1700,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 99.82630106172552,
+        "OfferedRatePerSecond": 100,
+        "Latency": {
+          "Count": 1501,
+          "P50": 63.394,
+          "P95": 110.0148,
+          "P99": 112.3509,
+          "Max": 124.8231,
+          "Mean": 64.13094010659567
+        },
+        "Ordering": {
+          "Delivered": 1700,
+          "Unique": 1700,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "pg-xmin",
+        "Engine": "PostgreSQL",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 1700,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 99.84367710402122,
+        "OfferedRatePerSecond": 100,
+        "Latency": {
+          "Count": 1501,
+          "P50": 63.727,
+          "P95": 110.3043,
+          "P99": 123.2539,
+          "Max": 140.5883,
+          "Mean": 65.04396735509653
+        },
+        "Ordering": {
+          "Delivered": 1700,
+          "Unique": 1700,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "pg-xmin",
+        "Engine": "PostgreSQL",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 1700,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 99.86480302965845,
+        "OfferedRatePerSecond": 100,
+        "Latency": {
+          "Count": 1501,
+          "P50": 63.4082,
+          "P95": 109.9005,
+          "P99": 122.2406,
+          "Max": 153.772,
+          "Mean": 64.60819999999991
+        },
+        "Ordering": {
+          "Delivered": 1700,
+          "Unique": 1700,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "pg-logical",
+        "Engine": "PostgreSQL",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 1700,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 99.83892457738918,
+        "OfferedRatePerSecond": 100,
+        "Latency": {
+          "Count": 1501,
+          "P50": 4.2212,
+          "P95": 7.4929,
+          "P99": 17.6874,
+          "Max": 35.7013,
+          "Mean": 4.732943237841444
+        },
+        "Ordering": {
+          "Delivered": 1700,
+          "Unique": 1700,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "pg-logical",
+        "Engine": "PostgreSQL",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 1700,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 99.83631601081048,
+        "OfferedRatePerSecond": 100,
+        "Latency": {
+          "Count": 1502,
+          "P50": 4.2037,
+          "P95": 6.4582,
+          "P99": 9.4895,
+          "Max": 23.0002,
+          "Mean": 4.436409720372831
+        },
+        "Ordering": {
+          "Delivered": 1700,
+          "Unique": 1700,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "pg-logical",
+        "Engine": "PostgreSQL",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 1700,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 99.82315564623727,
+        "OfferedRatePerSecond": 100,
+        "Latency": {
+          "Count": 1502,
+          "P50": 4.9347,
+          "P95": 17.8618,
+          "P99": 35.0852,
+          "Max": 71.9738,
+          "Mean": 6.8128922769640505
+        },
+        "Ordering": {
+          "Delivered": 1700,
+          "Unique": 1700,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "ora-skip-locked",
+        "Engine": "Oracle",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 1700,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 99.89500036511622,
+        "OfferedRatePerSecond": 100,
+        "Latency": {
+          "Count": 1502,
+          "P50": 64.5049,
+          "P95": 124.4658,
+          "P99": 130.986,
+          "Max": 156.2824,
+          "Mean": 68.71727896138485
+        },
+        "Ordering": {
+          "Delivered": 1700,
+          "Unique": 1700,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "ora-skip-locked",
+        "Engine": "Oracle",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 1700,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 99.82734215233128,
+        "OfferedRatePerSecond": 100,
+        "Latency": {
+          "Count": 1502,
+          "P50": 64.682,
+          "P95": 124.1635,
+          "P99": 135.4036,
+          "Max": 187.1432,
+          "Mean": 68.48894027962717
+        },
+        "Ordering": {
+          "Delivered": 1700,
+          "Unique": 1700,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "ora-skip-locked",
+        "Engine": "Oracle",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 1700,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 99.85299231312283,
+        "OfferedRatePerSecond": 100,
+        "Latency": {
+          "Count": 1501,
+          "P50": 64.8007,
+          "P95": 124.7742,
+          "P99": 127.761,
+          "Max": 140.4205,
+          "Mean": 69.22629900066626
+        },
+        "Ordering": {
+          "Delivered": 1700,
+          "Unique": 1700,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "ora-aq",
+        "Engine": "Oracle",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 1700,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 98.62659450340529,
+        "OfferedRatePerSecond": 100,
+        "Latency": {
+          "Count": 1501,
+          "P50": 5.4462,
+          "P95": 23.7183,
+          "P99": 43.8756,
+          "Max": 378.4831,
+          "Mean": 9.577663890739505
+        },
+        "Ordering": {
+          "Delivered": 1700,
+          "Unique": 1700,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "ora-aq",
+        "Engine": "Oracle",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 1700,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 99.8682303321387,
+        "OfferedRatePerSecond": 100,
+        "Latency": {
+          "Count": 1501,
+          "P50": 4.2268,
+          "P95": 11.7858,
+          "P99": 20.0386,
+          "Max": 53.4436,
+          "Mean": 5.402119387075283
+        },
+        "Ordering": {
+          "Delivered": 1700,
+          "Unique": 1700,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "ora-aq",
+        "Engine": "Oracle",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 1700,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 99.84287667766132,
+        "OfferedRatePerSecond": 100,
+        "Latency": {
+          "Count": 1501,
+          "P50": 4.3657,
+          "P95": 12.853,
+          "P99": 33.6372,
+          "Max": 52.0264,
+          "Mean": 5.88227448367755
+        },
+        "Ordering": {
+          "Delivered": 1700,
+          "Unique": 1700,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "pg-skip-locked",
+        "Engine": "PostgreSQL",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 8500,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 499.45641514159115,
+        "OfferedRatePerSecond": 500,
+        "Latency": {
+          "Count": 7505,
+          "P50": 62.9832,
+          "P95": 110.1259,
+          "P99": 119.5115,
+          "Max": 129.2745,
+          "Mean": 62.77384255829437
+        },
+        "Ordering": {
+          "Delivered": 8500,
+          "Unique": 8500,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "pg-skip-locked",
+        "Engine": "PostgreSQL",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 8500,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 499.2996705338816,
+        "OfferedRatePerSecond": 500,
+        "Latency": {
+          "Count": 7504,
+          "P50": 64.1382,
+          "P95": 115.4522,
+          "P99": 127.4984,
+          "Max": 157.8338,
+          "Mean": 65.39372957089547
+        },
+        "Ordering": {
+          "Delivered": 8500,
+          "Unique": 8500,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "pg-skip-locked",
+        "Engine": "PostgreSQL",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 8500,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 499.12517449856506,
+        "OfferedRatePerSecond": 500,
+        "Latency": {
+          "Count": 7503,
+          "P50": 63.8916,
+          "P95": 112.9339,
+          "P99": 125.793,
+          "Max": 141.6011,
+          "Mean": 64.45434498200686
+        },
+        "Ordering": {
+          "Delivered": 8500,
+          "Unique": 8500,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "pg-notify",
+        "Engine": "PostgreSQL",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 8500,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 363.27927138008243,
+        "OfferedRatePerSecond": 500,
+        "Latency": {
+          "Count": 7505,
+          "P50": 12.8473,
+          "P95": 30.037,
+          "P99": 45.5009,
+          "Max": 66.244,
+          "Mean": 15.134361479013984
+        },
+        "Ordering": {
+          "Delivered": 8500,
+          "Unique": 8500,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "pg-notify",
+        "Engine": "PostgreSQL",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 8500,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 327.8249245513829,
+        "OfferedRatePerSecond": 500,
+        "Latency": {
+          "Count": 8227,
+          "P50": 10.7501,
+          "P95": 33.9721,
+          "P99": 52.0725,
+          "Max": 1856.0347,
+          "Mean": 15.370190835055269
+        },
+        "Ordering": {
+          "Delivered": 8500,
+          "Unique": 8500,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "pg-notify",
+        "Engine": "PostgreSQL",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 8500,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 473.43809541802824,
+        "OfferedRatePerSecond": 500,
+        "Latency": {
+          "Count": 7511,
+          "P50": 9.486,
+          "P95": 20.2113,
+          "P99": 45.3437,
+          "Max": 537.8298,
+          "Mean": 11.394258168020237
+        },
+        "Ordering": {
+          "Delivered": 8500,
+          "Unique": 8500,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "pg-xmin",
+        "Engine": "PostgreSQL",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 8500,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 499.61439467128446,
+        "OfferedRatePerSecond": 500,
+        "Latency": {
+          "Count": 7968,
+          "P50": 63.404,
+          "P95": 113.5174,
+          "P99": 128.1023,
+          "Max": 527.6946,
+          "Mean": 64.94355741716865
+        },
+        "Ordering": {
+          "Delivered": 8500,
+          "Unique": 8500,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "pg-xmin",
+        "Engine": "PostgreSQL",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 8500,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 499.54441842888946,
+        "OfferedRatePerSecond": 500,
+        "Latency": {
+          "Count": 7505,
+          "P50": 63.2053,
+          "P95": 112.5332,
+          "P99": 136.8202,
+          "Max": 420.8808,
+          "Mean": 64.37047223184528
+        },
+        "Ordering": {
+          "Delivered": 8500,
+          "Unique": 8500,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "pg-xmin",
+        "Engine": "PostgreSQL",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 8500,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 499.4135240101218,
+        "OfferedRatePerSecond": 500,
+        "Latency": {
+          "Count": 7507,
+          "P50": 63.7721,
+          "P95": 116.7051,
+          "P99": 160.0219,
+          "Max": 412.4526,
+          "Mean": 66.5517764220062
+        },
+        "Ordering": {
+          "Delivered": 8500,
+          "Unique": 8500,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "pg-logical",
+        "Engine": "PostgreSQL",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 8500,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 499.25195024551397,
+        "OfferedRatePerSecond": 500,
+        "Latency": {
+          "Count": 7506,
+          "P50": 6.1748,
+          "P95": 11.5647,
+          "P99": 21.678,
+          "Max": 283.525,
+          "Mean": 7.052434012789764
+        },
+        "Ordering": {
+          "Delivered": 8500,
+          "Unique": 8500,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "pg-logical",
+        "Engine": "PostgreSQL",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 8500,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 499.35277124896874,
+        "OfferedRatePerSecond": 500,
+        "Latency": {
+          "Count": 7636,
+          "P50": 6.0132,
+          "P95": 13.9897,
+          "P99": 30.1759,
+          "Max": 376.8936,
+          "Mean": 7.742051794133053
+        },
+        "Ordering": {
+          "Delivered": 8500,
+          "Unique": 8500,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "pg-logical",
+        "Engine": "PostgreSQL",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 8500,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 497.6831968920211,
+        "OfferedRatePerSecond": 500,
+        "Latency": {
+          "Count": 7504,
+          "P50": 5.2863,
+          "P95": 11.5191,
+          "P99": 21.9394,
+          "Max": 42.4142,
+          "Mean": 6.0688128198294296
+        },
+        "Ordering": {
+          "Delivered": 8500,
+          "Unique": 8500,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "ora-skip-locked",
+        "Engine": "Oracle",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 8500,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 494.49058083579183,
+        "OfferedRatePerSecond": 500,
+        "Latency": {
+          "Count": 7504,
+          "P50": 68.0352,
+          "P95": 125.1108,
+          "P99": 181.8192,
+          "Max": 300.6669,
+          "Mean": 70.35708122334746
+        },
+        "Ordering": {
+          "Delivered": 8500,
+          "Unique": 8500,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "ora-skip-locked",
+        "Engine": "Oracle",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 8500,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 499.10699775960853,
+        "OfferedRatePerSecond": 500,
+        "Latency": {
+          "Count": 7507,
+          "P50": 68.0472,
+          "P95": 124.3786,
+          "P99": 130.8316,
+          "Max": 262.636,
+          "Mean": 69.54110690022628
+        },
+        "Ordering": {
+          "Delivered": 8500,
+          "Unique": 8500,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "ora-skip-locked",
+        "Engine": "Oracle",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 8500,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 499.50059049490693,
+        "OfferedRatePerSecond": 500,
+        "Latency": {
+          "Count": 7506,
+          "P50": 66.0994,
+          "P95": 123.3235,
+          "P99": 130.3329,
+          "Max": 245.0435,
+          "Mean": 68.74918559818829
+        },
+        "Ordering": {
+          "Delivered": 8500,
+          "Unique": 8500,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "ora-aq",
+        "Engine": "Oracle",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 8500,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 498.9138996578965,
+        "OfferedRatePerSecond": 500,
+        "Latency": {
+          "Count": 7508,
+          "P50": 7.1116,
+          "P95": 16.5942,
+          "P99": 28.8601,
+          "Max": 233.3997,
+          "Mean": 8.785676265316994
+        },
+        "Ordering": {
+          "Delivered": 8500,
+          "Unique": 8500,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "ora-aq",
+        "Engine": "Oracle",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 8500,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 440.3897067579132,
+        "OfferedRatePerSecond": 500,
+        "Latency": {
+          "Count": 7506,
+          "P50": 8.6995,
+          "P95": 23.2805,
+          "P99": 39.8641,
+          "Max": 680.5782,
+          "Mean": 11.727127364774832
+        },
+        "Ordering": {
+          "Delivered": 8500,
+          "Unique": 8500,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "latency",
+        "Strategy": "ora-aq",
+        "Engine": "Oracle",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 8500,
+        "DurationSeconds": 17,
+        "ThroughputPerSecond": 496.0460143020803,
+        "OfferedRatePerSecond": 500,
+        "Latency": {
+          "Count": 7625,
+          "P50": 6.6809,
+          "P95": 16.4943,
+          "P99": 28.4675,
+          "Max": 250.747,
+          "Mean": 8.437122426229523
+        },
+        "Ordering": {
+          "Delivered": 8500,
+          "Unique": 8500,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        },
+        "Notes": "poll/wait 100 ms"
+      }
+    }
+  ]
+}

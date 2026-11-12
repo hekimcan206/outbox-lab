@@ -1,0 +1,1283 @@
+{
+  "generatedUtc": "2026-11-12T10:52:19.4686322Z",
+  "runsPerConfiguration": 3,
+  "medians": [
+    {
+      "Scenario": "publish",
+      "Strategy": "pg-skip-locked",
+      "Engine": "PostgreSQL",
+      "Workers": 0,
+      "Producers": 1,
+      "Messages": 1065,
+      "DurationSeconds": 8.0122008,
+      "ThroughputPerSecond": 132.92228023042057,
+      "Latency": {
+        "Count": 1065,
+        "P50": 5.0226,
+        "P95": 20.8236,
+        "P99": 49.1088,
+        "Max": 104.1429,
+        "Mean": 7.52243502347418
+      },
+      "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+    },
+    {
+      "Scenario": "publish",
+      "Strategy": "pg-notify",
+      "Engine": "PostgreSQL",
+      "Workers": 0,
+      "Producers": 1,
+      "Messages": 1063,
+      "DurationSeconds": 8.0137675,
+      "ThroughputPerSecond": 132.6467232796559,
+      "Latency": {
+        "Count": 1063,
+        "P50": 6.3292,
+        "P95": 15.2107,
+        "P99": 25.4523,
+        "Max": 57.3852,
+        "Mean": 7.538276293508933
+      },
+      "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+    },
+    {
+      "Scenario": "publish",
+      "Strategy": "pg-logical",
+      "Engine": "PostgreSQL",
+      "Workers": 0,
+      "Producers": 1,
+      "Messages": 1104,
+      "DurationSeconds": 8.0103917,
+      "ThroughputPerSecond": 137.82097572082523,
+      "Latency": {
+        "Count": 1104,
+        "P50": 5.4632,
+        "P95": 13.9968,
+        "P99": 25.8857,
+        "Max": 514.6658,
+        "Mean": 7.255297826086947
+      },
+      "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+    },
+    {
+      "Scenario": "publish",
+      "Strategy": "ora-skip-locked",
+      "Engine": "Oracle",
+      "Workers": 0,
+      "Producers": 1,
+      "Messages": 1906,
+      "DurationSeconds": 8.016203,
+      "ThroughputPerSecond": 237.76842976656152,
+      "Latency": {
+        "Count": 1906,
+        "P50": 3.4204,
+        "P95": 7.7358,
+        "P99": 16.4141,
+        "Max": 121.1438,
+        "Mean": 4.205336463798531
+      },
+      "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+    },
+    {
+      "Scenario": "publish",
+      "Strategy": "ora-aq",
+      "Engine": "Oracle",
+      "Workers": 0,
+      "Producers": 1,
+      "Messages": 1535,
+      "DurationSeconds": 8.0191062,
+      "ThroughputPerSecond": 191.41784155446152,
+      "Latency": {
+        "Count": 1535,
+        "P50": 3.8708,
+        "P95": 10.2253,
+        "P99": 34.4632,
+        "Max": 93.7197,
+        "Mean": 5.223705146579803
+      },
+      "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+    },
+    {
+      "Scenario": "publish",
+      "Strategy": "pg-skip-locked",
+      "Engine": "PostgreSQL",
+      "Workers": 0,
+      "Producers": 8,
+      "Messages": 7807,
+      "DurationSeconds": 8.0146976,
+      "ThroughputPerSecond": 974.0854102842259,
+      "Latency": {
+        "Count": 7807,
+        "P50": 7.3495,
+        "P95": 14.1116,
+        "P99": 21.9943,
+        "Max": 54.4914,
+        "Mean": 8.210688279748945
+      },
+      "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+    },
+    {
+      "Scenario": "publish",
+      "Strategy": "pg-notify",
+      "Engine": "PostgreSQL",
+      "Workers": 0,
+      "Producers": 8,
+      "Messages": 5759,
+      "DurationSeconds": 8.0228149,
+      "ThroughputPerSecond": 717.8278536626839,
+      "Latency": {
+        "Count": 5759,
+        "P50": 10.2617,
+        "P95": 18.1118,
+        "P99": 24.2238,
+        "Max": 74.2108,
+        "Mean": 11.138045910748438
+      },
+      "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+    },
+    {
+      "Scenario": "publish",
+      "Strategy": "pg-logical",
+      "Engine": "PostgreSQL",
+      "Workers": 0,
+      "Producers": 8,
+      "Messages": 9152,
+      "DurationSeconds": 8.019288,
+      "ThroughputPerSecond": 1141.2484499870811,
+      "Latency": {
+        "Count": 9152,
+        "P50": 5.5123,
+        "P95": 17.7167,
+        "P99": 33.5422,
+        "Max": 72.9225,
+        "Mean": 7.006455987762234
+      },
+      "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+    },
+    {
+      "Scenario": "publish",
+      "Strategy": "ora-skip-locked",
+      "Engine": "Oracle",
+      "Workers": 0,
+      "Producers": 8,
+      "Messages": 7526,
+      "DurationSeconds": 8.0060824,
+      "ThroughputPerSecond": 940.0352911681248,
+      "Latency": {
+        "Count": 7526,
+        "P50": 6.4421,
+        "P95": 18.013,
+        "P99": 38.3438,
+        "Max": 369.7867,
+        "Mean": 8.508857985649756
+      },
+      "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+    },
+    {
+      "Scenario": "publish",
+      "Strategy": "ora-aq",
+      "Engine": "Oracle",
+      "Workers": 0,
+      "Producers": 8,
+      "Messages": 7220,
+      "DurationSeconds": 8.0362622,
+      "ThroughputPerSecond": 898.4276297007831,
+      "Latency": {
+        "Count": 7220,
+        "P50": 6.4738,
+        "P95": 25.3121,
+        "P99": 45.23,
+        "Max": 201.7457,
+        "Mean": 8.881273919667589
+      },
+      "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+    },
+    {
+      "Scenario": "publish",
+      "Strategy": "pg-skip-locked",
+      "Engine": "PostgreSQL",
+      "Workers": 0,
+      "Producers": 32,
+      "Messages": 11714,
+      "DurationSeconds": 8.0345626,
+      "ThroughputPerSecond": 1457.951177080878,
+      "Latency": {
+        "Count": 11714,
+        "P50": 16.288,
+        "P95": 52.9606,
+        "P99": 71.3614,
+        "Max": 104.0032,
+        "Mean": 21.92806759433156
+      },
+      "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+    },
+    {
+      "Scenario": "publish",
+      "Strategy": "pg-notify",
+      "Engine": "PostgreSQL",
+      "Workers": 0,
+      "Producers": 32,
+      "Messages": 4197,
+      "DurationSeconds": 8.0835587,
+      "ThroughputPerSecond": 519.2020192789595,
+      "Latency": {
+        "Count": 4197,
+        "P50": 50.2215,
+        "P95": 107.5233,
+        "P99": 165.9221,
+        "Max": 261.934,
+        "Mean": 61.35318031927575
+      },
+      "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+    },
+    {
+      "Scenario": "publish",
+      "Strategy": "pg-logical",
+      "Engine": "PostgreSQL",
+      "Workers": 0,
+      "Producers": 32,
+      "Messages": 14770,
+      "DurationSeconds": 8.0203808,
+      "ThroughputPerSecond": 1841.5584457037253,
+      "Latency": {
+        "Count": 14770,
+        "P50": 12.7592,
+        "P95": 45.8062,
+        "P99": 64.3887,
+        "Max": 121.3816,
+        "Mean": 17.36984993229519
+      },
+      "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+    },
+    {
+      "Scenario": "publish",
+      "Strategy": "ora-skip-locked",
+      "Engine": "Oracle",
+      "Workers": 0,
+      "Producers": 32,
+      "Messages": 13994,
+      "DurationSeconds": 8.0137173,
+      "ThroughputPerSecond": 1746.2557607316644,
+      "Latency": {
+        "Count": 13994,
+        "P50": 12.3029,
+        "P95": 48.3013,
+        "P99": 75.3823,
+        "Max": 253.7764,
+        "Mean": 18.312204123195645
+      },
+      "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+    },
+    {
+      "Scenario": "publish",
+      "Strategy": "ora-aq",
+      "Engine": "Oracle",
+      "Workers": 0,
+      "Producers": 32,
+      "Messages": 10888,
+      "DurationSeconds": 8.0667372,
+      "ThroughputPerSecond": 1349.740264254549,
+      "Latency": {
+        "Count": 10888,
+        "P50": 14.331,
+        "P95": 61.2619,
+        "P99": 74.4689,
+        "Max": 406.9584,
+        "Mean": 23.582250743938264
+      },
+      "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+    }
+  ],
+  "runs": [
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "pg-skip-locked",
+        "Engine": "PostgreSQL",
+        "Workers": 0,
+        "Producers": 1,
+        "Messages": 1182,
+        "DurationSeconds": 8.0123112,
+        "ThroughputPerSecond": 147.52297689086268,
+        "Latency": {
+          "Count": 1182,
+          "P50": 4.7244,
+          "P95": 18.6697,
+          "P99": 53.29,
+          "Max": 91.0364,
+          "Mean": 6.775448815566837
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "pg-skip-locked",
+        "Engine": "PostgreSQL",
+        "Workers": 0,
+        "Producers": 1,
+        "Messages": 1065,
+        "DurationSeconds": 8.0122008,
+        "ThroughputPerSecond": 132.92228023042057,
+        "Latency": {
+          "Count": 1065,
+          "P50": 5.0226,
+          "P95": 20.8236,
+          "P99": 49.1088,
+          "Max": 104.1429,
+          "Mean": 7.52243502347418
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "pg-skip-locked",
+        "Engine": "PostgreSQL",
+        "Workers": 0,
+        "Producers": 1,
+        "Messages": 972,
+        "DurationSeconds": 8.0416008,
+        "ThroughputPerSecond": 120.87145633988696,
+        "Latency": {
+          "Count": 972,
+          "P50": 5.6115,
+          "P95": 23.698,
+          "P99": 47.5861,
+          "Max": 149.0384,
+          "Mean": 8.272727366255147
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "pg-notify",
+        "Engine": "PostgreSQL",
+        "Workers": 0,
+        "Producers": 1,
+        "Messages": 1165,
+        "DurationSeconds": 8.0061596,
+        "ThroughputPerSecond": 145.51296229468122,
+        "Latency": {
+          "Count": 1165,
+          "P50": 5.9319,
+          "P95": 12.3679,
+          "P99": 22.0318,
+          "Max": 36.9157,
+          "Mean": 6.871772875536475
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "pg-notify",
+        "Engine": "PostgreSQL",
+        "Workers": 0,
+        "Producers": 1,
+        "Messages": 1063,
+        "DurationSeconds": 8.0137675,
+        "ThroughputPerSecond": 132.6467232796559,
+        "Latency": {
+          "Count": 1063,
+          "P50": 6.3292,
+          "P95": 15.2107,
+          "P99": 25.4523,
+          "Max": 57.3852,
+          "Mean": 7.538276293508933
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "pg-notify",
+        "Engine": "PostgreSQL",
+        "Workers": 0,
+        "Producers": 1,
+        "Messages": 794,
+        "DurationSeconds": 8.0014116,
+        "ThroughputPerSecond": 99.23249042706414,
+        "Latency": {
+          "Count": 794,
+          "P50": 8.2762,
+          "P95": 17.6965,
+          "P99": 30.4823,
+          "Max": 364.1911,
+          "Mean": 10.076657304785893
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "pg-logical",
+        "Engine": "PostgreSQL",
+        "Workers": 0,
+        "Producers": 1,
+        "Messages": 745,
+        "DurationSeconds": 8.4745068,
+        "ThroughputPerSecond": 87.91072065692366,
+        "Latency": {
+          "Count": 745,
+          "P50": 7.7303,
+          "P95": 26.152,
+          "P99": 47.4123,
+          "Max": 713.6464,
+          "Mean": 11.37457624161074
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "pg-logical",
+        "Engine": "PostgreSQL",
+        "Workers": 0,
+        "Producers": 1,
+        "Messages": 1104,
+        "DurationSeconds": 8.0103917,
+        "ThroughputPerSecond": 137.82097572082523,
+        "Latency": {
+          "Count": 1104,
+          "P50": 5.4632,
+          "P95": 13.9968,
+          "P99": 25.8857,
+          "Max": 514.6658,
+          "Mean": 7.255297826086947
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "pg-logical",
+        "Engine": "PostgreSQL",
+        "Workers": 0,
+        "Producers": 1,
+        "Messages": 1754,
+        "DurationSeconds": 8.0031405,
+        "ThroughputPerSecond": 219.16396444620707,
+        "Latency": {
+          "Count": 1754,
+          "P50": 3.9516,
+          "P95": 7.4202,
+          "P99": 14.8557,
+          "Max": 127.3654,
+          "Mean": 4.5623007981756
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "ora-skip-locked",
+        "Engine": "Oracle",
+        "Workers": 0,
+        "Producers": 1,
+        "Messages": 1716,
+        "DurationSeconds": 8.014394,
+        "ThroughputPerSecond": 214.11475402881368,
+        "Latency": {
+          "Count": 1716,
+          "P50": 3.679,
+          "P95": 8.204,
+          "P99": 25.5083,
+          "Max": 95.0881,
+          "Mean": 4.669944696969695
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "ora-skip-locked",
+        "Engine": "Oracle",
+        "Workers": 0,
+        "Producers": 1,
+        "Messages": 1906,
+        "DurationSeconds": 8.016203,
+        "ThroughputPerSecond": 237.76842976656152,
+        "Latency": {
+          "Count": 1906,
+          "P50": 3.4204,
+          "P95": 7.7358,
+          "P99": 16.4141,
+          "Max": 121.1438,
+          "Mean": 4.205336463798531
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "ora-skip-locked",
+        "Engine": "Oracle",
+        "Workers": 0,
+        "Producers": 1,
+        "Messages": 2070,
+        "DurationSeconds": 8.009526,
+        "ThroughputPerSecond": 258.44225987904906,
+        "Latency": {
+          "Count": 2070,
+          "P50": 3.0257,
+          "P95": 6.7735,
+          "P99": 19.4902,
+          "Max": 276.255,
+          "Mean": 3.869006521739128
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "ora-aq",
+        "Engine": "Oracle",
+        "Workers": 0,
+        "Producers": 1,
+        "Messages": 1811,
+        "DurationSeconds": 8.0057098,
+        "ThroughputPerSecond": 226.2135457370688,
+        "Latency": {
+          "Count": 1811,
+          "P50": 3.8259,
+          "P95": 7.2435,
+          "P99": 18.8789,
+          "Max": 58.1821,
+          "Mean": 4.4201125345113255
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "ora-aq",
+        "Engine": "Oracle",
+        "Workers": 0,
+        "Producers": 1,
+        "Messages": 1535,
+        "DurationSeconds": 8.0191062,
+        "ThroughputPerSecond": 191.41784155446152,
+        "Latency": {
+          "Count": 1535,
+          "P50": 3.8708,
+          "P95": 10.2253,
+          "P99": 34.4632,
+          "Max": 93.7197,
+          "Mean": 5.223705146579803
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "ora-aq",
+        "Engine": "Oracle",
+        "Workers": 0,
+        "Producers": 1,
+        "Messages": 1052,
+        "DurationSeconds": 8.0051458,
+        "ThroughputPerSecond": 131.4154702841265,
+        "Latency": {
+          "Count": 1052,
+          "P50": 5.3966,
+          "P95": 20.0892,
+          "P99": 44.0914,
+          "Max": 83.3175,
+          "Mean": 7.60892347908745
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "pg-skip-locked",
+        "Engine": "PostgreSQL",
+        "Workers": 0,
+        "Producers": 8,
+        "Messages": 7964,
+        "DurationSeconds": 8.015564,
+        "ThroughputPerSecond": 993.5670153715946,
+        "Latency": {
+          "Count": 7964,
+          "P50": 7.085,
+          "P95": 14.7866,
+          "P99": 23.8481,
+          "Max": 52.1793,
+          "Mean": 8.048657157207407
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "pg-skip-locked",
+        "Engine": "PostgreSQL",
+        "Workers": 0,
+        "Producers": 8,
+        "Messages": 5005,
+        "DurationSeconds": 8.2113349,
+        "ThroughputPerSecond": 609.5233066185133,
+        "Latency": {
+          "Count": 5005,
+          "P50": 10.4465,
+          "P95": 18.8238,
+          "P99": 30.3901,
+          "Max": 739.1166,
+          "Mean": 13.104439260739264
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "pg-skip-locked",
+        "Engine": "PostgreSQL",
+        "Workers": 0,
+        "Producers": 8,
+        "Messages": 7807,
+        "DurationSeconds": 8.0146976,
+        "ThroughputPerSecond": 974.0854102842259,
+        "Latency": {
+          "Count": 7807,
+          "P50": 7.3495,
+          "P95": 14.1116,
+          "P99": 21.9943,
+          "Max": 54.4914,
+          "Mean": 8.210688279748945
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "pg-notify",
+        "Engine": "PostgreSQL",
+        "Workers": 0,
+        "Producers": 8,
+        "Messages": 5759,
+        "DurationSeconds": 8.0228149,
+        "ThroughputPerSecond": 717.8278536626839,
+        "Latency": {
+          "Count": 5759,
+          "P50": 10.2617,
+          "P95": 18.1118,
+          "P99": 24.2238,
+          "Max": 74.2108,
+          "Mean": 11.138045910748438
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "pg-notify",
+        "Engine": "PostgreSQL",
+        "Workers": 0,
+        "Producers": 8,
+        "Messages": 5971,
+        "DurationSeconds": 8.0121518,
+        "ThroughputPerSecond": 745.2429945223954,
+        "Latency": {
+          "Count": 5971,
+          "P50": 10.3711,
+          "P95": 13.351,
+          "P99": 18.1589,
+          "Max": 44.6093,
+          "Mean": 10.728451063473436
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "pg-notify",
+        "Engine": "PostgreSQL",
+        "Workers": 0,
+        "Producers": 8,
+        "Messages": 5621,
+        "DurationSeconds": 8.0223548,
+        "ThroughputPerSecond": 700.667090914503,
+        "Latency": {
+          "Count": 5621,
+          "P50": 10.2804,
+          "P95": 16.7508,
+          "P99": 27.52,
+          "Max": 213.1958,
+          "Mean": 11.411038356164404
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "pg-logical",
+        "Engine": "PostgreSQL",
+        "Workers": 0,
+        "Producers": 8,
+        "Messages": 10642,
+        "DurationSeconds": 8.0119879,
+        "ThroughputPerSecond": 1328.2596195633298,
+        "Latency": {
+          "Count": 10642,
+          "P50": 5.033,
+          "P95": 11.6623,
+          "P99": 20.8268,
+          "Max": 199.9687,
+          "Mean": 6.02062881037402
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "pg-logical",
+        "Engine": "PostgreSQL",
+        "Workers": 0,
+        "Producers": 8,
+        "Messages": 8594,
+        "DurationSeconds": 8.0148796,
+        "ThroughputPerSecond": 1072.2556580887378,
+        "Latency": {
+          "Count": 8594,
+          "P50": 5.6213,
+          "P95": 15.3606,
+          "P99": 42.0159,
+          "Max": 232.6322,
+          "Mean": 7.458239062136365
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "pg-logical",
+        "Engine": "PostgreSQL",
+        "Workers": 0,
+        "Producers": 8,
+        "Messages": 9152,
+        "DurationSeconds": 8.019288,
+        "ThroughputPerSecond": 1141.2484499870811,
+        "Latency": {
+          "Count": 9152,
+          "P50": 5.5123,
+          "P95": 17.7167,
+          "P99": 33.5422,
+          "Max": 72.9225,
+          "Mean": 7.006455987762234
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "ora-skip-locked",
+        "Engine": "Oracle",
+        "Workers": 0,
+        "Producers": 8,
+        "Messages": 6848,
+        "DurationSeconds": 8.0180965,
+        "ThroughputPerSecond": 854.0680447036276,
+        "Latency": {
+          "Count": 6848,
+          "P50": 5.8155,
+          "P95": 24.0924,
+          "P99": 52.4449,
+          "Max": 555.1428,
+          "Mean": 9.362913040303726
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "ora-skip-locked",
+        "Engine": "Oracle",
+        "Workers": 0,
+        "Producers": 8,
+        "Messages": 7526,
+        "DurationSeconds": 8.0060824,
+        "ThroughputPerSecond": 940.0352911681248,
+        "Latency": {
+          "Count": 7526,
+          "P50": 6.4421,
+          "P95": 18.013,
+          "P99": 38.3438,
+          "Max": 369.7867,
+          "Mean": 8.508857985649756
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "ora-skip-locked",
+        "Engine": "Oracle",
+        "Workers": 0,
+        "Producers": 8,
+        "Messages": 8495,
+        "DurationSeconds": 8.0212635,
+        "ThroughputPerSecond": 1059.0600844866897,
+        "Latency": {
+          "Count": 8495,
+          "P50": 6.4619,
+          "P95": 14.9769,
+          "P99": 22.1525,
+          "Max": 152.8063,
+          "Mean": 7.552028051795175
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "ora-aq",
+        "Engine": "Oracle",
+        "Workers": 0,
+        "Producers": 8,
+        "Messages": 6071,
+        "DurationSeconds": 8.0068532,
+        "ThroughputPerSecond": 758.2254661544188,
+        "Latency": {
+          "Count": 6071,
+          "P50": 7.9104,
+          "P95": 19.6495,
+          "P99": 42.6006,
+          "Max": 371.7578,
+          "Mean": 10.546115895239653
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "ora-aq",
+        "Engine": "Oracle",
+        "Workers": 0,
+        "Producers": 8,
+        "Messages": 7220,
+        "DurationSeconds": 8.0362622,
+        "ThroughputPerSecond": 898.4276297007831,
+        "Latency": {
+          "Count": 7220,
+          "P50": 6.4738,
+          "P95": 25.3121,
+          "P99": 45.23,
+          "Max": 201.7457,
+          "Mean": 8.881273919667589
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "ora-aq",
+        "Engine": "Oracle",
+        "Workers": 0,
+        "Producers": 8,
+        "Messages": 9287,
+        "DurationSeconds": 8.0104973,
+        "ThroughputPerSecond": 1159.3537394987948,
+        "Latency": {
+          "Count": 9287,
+          "P50": 5.287,
+          "P95": 14.9055,
+          "P99": 35.1438,
+          "Max": 140.0923,
+          "Mean": 6.898390481317952
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "pg-skip-locked",
+        "Engine": "PostgreSQL",
+        "Workers": 0,
+        "Producers": 32,
+        "Messages": 13772,
+        "DurationSeconds": 8.0216296,
+        "ThroughputPerSecond": 1716.8581306721017,
+        "Latency": {
+          "Count": 13772,
+          "P50": 12.5067,
+          "P95": 49.3858,
+          "P99": 62.2096,
+          "Max": 227.634,
+          "Mean": 18.623471282311993
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "pg-skip-locked",
+        "Engine": "PostgreSQL",
+        "Workers": 0,
+        "Producers": 32,
+        "Messages": 9219,
+        "DurationSeconds": 8.0414207,
+        "ThroughputPerSecond": 1146.439210673308,
+        "Latency": {
+          "Count": 9219,
+          "P50": 21.2818,
+          "P95": 68.6801,
+          "P99": 100.8255,
+          "Max": 212.2327,
+          "Mean": 27.90105858552986
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "pg-skip-locked",
+        "Engine": "PostgreSQL",
+        "Workers": 0,
+        "Producers": 32,
+        "Messages": 11714,
+        "DurationSeconds": 8.0345626,
+        "ThroughputPerSecond": 1457.951177080878,
+        "Latency": {
+          "Count": 11714,
+          "P50": 16.288,
+          "P95": 52.9606,
+          "P99": 71.3614,
+          "Max": 104.0032,
+          "Mean": 21.92806759433156
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "pg-notify",
+        "Engine": "PostgreSQL",
+        "Workers": 0,
+        "Producers": 32,
+        "Messages": 5065,
+        "DurationSeconds": 8.0576464,
+        "ThroughputPerSecond": 628.5954667854376,
+        "Latency": {
+          "Count": 5065,
+          "P50": 45.9133,
+          "P95": 75.8658,
+          "P99": 127.4219,
+          "Max": 250.1826,
+          "Mean": 50.77181962487659
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "pg-notify",
+        "Engine": "PostgreSQL",
+        "Workers": 0,
+        "Producers": 32,
+        "Messages": 4197,
+        "DurationSeconds": 8.0835587,
+        "ThroughputPerSecond": 519.2020192789595,
+        "Latency": {
+          "Count": 4197,
+          "P50": 50.2215,
+          "P95": 107.5233,
+          "P99": 165.9221,
+          "Max": 261.934,
+          "Mean": 61.35318031927575
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "pg-notify",
+        "Engine": "PostgreSQL",
+        "Workers": 0,
+        "Producers": 32,
+        "Messages": 3059,
+        "DurationSeconds": 8.1627619,
+        "ThroughputPerSecond": 374.75060983954467,
+        "Latency": {
+          "Count": 3059,
+          "P50": 75.7292,
+          "P95": 160.2055,
+          "P99": 204.847,
+          "Max": 235.5005,
+          "Mean": 84.6172508009153
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "pg-logical",
+        "Engine": "PostgreSQL",
+        "Workers": 0,
+        "Producers": 32,
+        "Messages": 12836,
+        "DurationSeconds": 8.0212127,
+        "ThroughputPerSecond": 1600.256779127675,
+        "Latency": {
+          "Count": 12836,
+          "P50": 15.1261,
+          "P95": 31.2474,
+          "P99": 48.3905,
+          "Max": 731.9227,
+          "Mean": 19.980089264568388
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "pg-logical",
+        "Engine": "PostgreSQL",
+        "Workers": 0,
+        "Producers": 32,
+        "Messages": 16091,
+        "DurationSeconds": 8.0294965,
+        "ThroughputPerSecond": 2003.9861777136337,
+        "Latency": {
+          "Count": 16091,
+          "P50": 12.7434,
+          "P95": 37.2615,
+          "P99": 55.7797,
+          "Max": 114.4492,
+          "Mean": 15.95894559691754
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "pg-logical",
+        "Engine": "PostgreSQL",
+        "Workers": 0,
+        "Producers": 32,
+        "Messages": 14770,
+        "DurationSeconds": 8.0203808,
+        "ThroughputPerSecond": 1841.5584457037253,
+        "Latency": {
+          "Count": 14770,
+          "P50": 12.7592,
+          "P95": 45.8062,
+          "P99": 64.3887,
+          "Max": 121.3816,
+          "Mean": 17.36984993229519
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "ora-skip-locked",
+        "Engine": "Oracle",
+        "Workers": 0,
+        "Producers": 32,
+        "Messages": 12476,
+        "DurationSeconds": 8.0394258,
+        "ThroughputPerSecond": 1551.8521235683274,
+        "Latency": {
+          "Count": 12476,
+          "P50": 12.3612,
+          "P95": 50.5679,
+          "P99": 95.9442,
+          "Max": 744.0966,
+          "Mean": 20.597284570375137
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "ora-skip-locked",
+        "Engine": "Oracle",
+        "Workers": 0,
+        "Producers": 32,
+        "Messages": 13994,
+        "DurationSeconds": 8.0137173,
+        "ThroughputPerSecond": 1746.2557607316644,
+        "Latency": {
+          "Count": 13994,
+          "P50": 12.3029,
+          "P95": 48.3013,
+          "P99": 75.3823,
+          "Max": 253.7764,
+          "Mean": 18.312204123195645
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "ora-skip-locked",
+        "Engine": "Oracle",
+        "Workers": 0,
+        "Producers": 32,
+        "Messages": 14640,
+        "DurationSeconds": 8.0255568,
+        "ThroughputPerSecond": 1824.1724985361761,
+        "Latency": {
+          "Count": 14640,
+          "P50": 11.0632,
+          "P95": 48.0337,
+          "P99": 61.9091,
+          "Max": 319.5336,
+          "Mean": 17.530680061475472
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "ora-aq",
+        "Engine": "Oracle",
+        "Workers": 0,
+        "Producers": 32,
+        "Messages": 11718,
+        "DurationSeconds": 8.0174759,
+        "ThroughputPerSecond": 1461.5572464645636,
+        "Latency": {
+          "Count": 11718,
+          "P50": 11.2189,
+          "P95": 66.1475,
+          "P99": 94.1932,
+          "Max": 255.5004,
+          "Mean": 21.883008670421574
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "ora-aq",
+        "Engine": "Oracle",
+        "Workers": 0,
+        "Producers": 32,
+        "Messages": 9876,
+        "DurationSeconds": 8.0505341,
+        "ThroughputPerSecond": 1226.7509058808905,
+        "Latency": {
+          "Count": 9876,
+          "P50": 13.0691,
+          "P95": 70.7997,
+          "P99": 173.1079,
+          "Max": 637.2787,
+          "Mean": 26.069036614013736
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "publish",
+        "Strategy": "ora-aq",
+        "Engine": "Oracle",
+        "Workers": 0,
+        "Producers": 32,
+        "Messages": 10888,
+        "DurationSeconds": 8.0667372,
+        "ThroughputPerSecond": 1349.740264254549,
+        "Latency": {
+          "Count": 10888,
+          "P50": 14.331,
+          "P95": 61.2619,
+          "P99": 74.4689,
+          "Max": 406.9584,
+          "Mean": 23.582250743938264
+        },
+        "Notes": "latency = one business transaction (business row \u002B outbox write \u002B commit)"
+      }
+    }
+  ]
+}

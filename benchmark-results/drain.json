@@ -1,0 +1,720 @@
+{
+  "generatedUtc": "2026-11-12T10:54:07.3326803Z",
+  "runsPerConfiguration": 3,
+  "medians": [
+    {
+      "Scenario": "drain",
+      "Strategy": "pg-skip-locked",
+      "Engine": "PostgreSQL",
+      "Workers": 1,
+      "Producers": 4,
+      "Messages": 20000,
+      "DurationSeconds": 1.936184,
+      "ThroughputPerSecond": 10329.596773860336,
+      "Ordering": {
+        "Delivered": 20000,
+        "Unique": 20000,
+        "Duplicates": 0,
+        "Missing": 0,
+        "Inversions": 0,
+        "AggregatesWithInversion": 0,
+        "LossFree": true,
+        "InOrder": true
+      }
+    },
+    {
+      "Scenario": "drain",
+      "Strategy": "pg-skip-locked",
+      "Engine": "PostgreSQL",
+      "Workers": 4,
+      "Producers": 4,
+      "Messages": 20000,
+      "DurationSeconds": 0.4376479,
+      "ThroughputPerSecond": 45698.836896052744,
+      "Ordering": {
+        "Delivered": 20000,
+        "Unique": 20000,
+        "Duplicates": 0,
+        "Missing": 0,
+        "Inversions": 1260,
+        "AggregatesWithInversion": 64,
+        "LossFree": true,
+        "InOrder": false
+      }
+    },
+    {
+      "Scenario": "drain",
+      "Strategy": "pg-xmin",
+      "Engine": "PostgreSQL",
+      "Workers": 1,
+      "Producers": 4,
+      "Messages": 20000,
+      "DurationSeconds": 2.0299624,
+      "ThroughputPerSecond": 9852.399236557289,
+      "Ordering": {
+        "Delivered": 20000,
+        "Unique": 20000,
+        "Duplicates": 0,
+        "Missing": 0,
+        "Inversions": 0,
+        "AggregatesWithInversion": 0,
+        "LossFree": true,
+        "InOrder": true
+      }
+    },
+    {
+      "Scenario": "drain",
+      "Strategy": "pg-logical",
+      "Engine": "PostgreSQL",
+      "Workers": 1,
+      "Producers": 4,
+      "Messages": 20000,
+      "DurationSeconds": 0.1360835,
+      "ThroughputPerSecond": 146968.58913828642,
+      "Ordering": {
+        "Delivered": 20000,
+        "Unique": 20000,
+        "Duplicates": 0,
+        "Missing": 0,
+        "Inversions": 0,
+        "AggregatesWithInversion": 0,
+        "LossFree": true,
+        "InOrder": true
+      }
+    },
+    {
+      "Scenario": "drain",
+      "Strategy": "ora-skip-locked",
+      "Engine": "Oracle",
+      "Workers": 1,
+      "Producers": 4,
+      "Messages": 20000,
+      "DurationSeconds": 2.6433656,
+      "ThroughputPerSecond": 7566.11192942815,
+      "Ordering": {
+        "Delivered": 20000,
+        "Unique": 20000,
+        "Duplicates": 0,
+        "Missing": 0,
+        "Inversions": 0,
+        "AggregatesWithInversion": 0,
+        "LossFree": true,
+        "InOrder": true
+      }
+    },
+    {
+      "Scenario": "drain",
+      "Strategy": "ora-skip-locked",
+      "Engine": "Oracle",
+      "Workers": 4,
+      "Producers": 4,
+      "Messages": 20000,
+      "DurationSeconds": 1.4540111,
+      "ThroughputPerSecond": 13755.053176691705,
+      "Ordering": {
+        "Delivered": 20000,
+        "Unique": 20000,
+        "Duplicates": 0,
+        "Missing": 0,
+        "Inversions": 3761,
+        "AggregatesWithInversion": 64,
+        "LossFree": true,
+        "InOrder": false
+      }
+    },
+    {
+      "Scenario": "drain",
+      "Strategy": "ora-aq",
+      "Engine": "Oracle",
+      "Workers": 1,
+      "Producers": 4,
+      "Messages": 20000,
+      "DurationSeconds": 3.4155299,
+      "ThroughputPerSecond": 5855.60676836704,
+      "Ordering": {
+        "Delivered": 20000,
+        "Unique": 20000,
+        "Duplicates": 0,
+        "Missing": 0,
+        "Inversions": 0,
+        "AggregatesWithInversion": 0,
+        "LossFree": true,
+        "InOrder": true
+      }
+    },
+    {
+      "Scenario": "drain",
+      "Strategy": "ora-aq",
+      "Engine": "Oracle",
+      "Workers": 4,
+      "Producers": 4,
+      "Messages": 20000,
+      "DurationSeconds": 3.9771585,
+      "ThroughputPerSecond": 5028.715853290735,
+      "Ordering": {
+        "Delivered": 20000,
+        "Unique": 20000,
+        "Duplicates": 0,
+        "Missing": 0,
+        "Inversions": 5727,
+        "AggregatesWithInversion": 64,
+        "LossFree": true,
+        "InOrder": false
+      }
+    }
+  ],
+  "runs": [
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "drain",
+        "Strategy": "pg-skip-locked",
+        "Engine": "PostgreSQL",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 20000,
+        "DurationSeconds": 1.9913499,
+        "ThroughputPerSecond": 10043.438373135732,
+        "Ordering": {
+          "Delivered": 20000,
+          "Unique": 20000,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        }
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "drain",
+        "Strategy": "pg-skip-locked",
+        "Engine": "PostgreSQL",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 20000,
+        "DurationSeconds": 1.936184,
+        "ThroughputPerSecond": 10329.596773860336,
+        "Ordering": {
+          "Delivered": 20000,
+          "Unique": 20000,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        }
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "drain",
+        "Strategy": "pg-skip-locked",
+        "Engine": "PostgreSQL",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 20000,
+        "DurationSeconds": 1.4633067000000002,
+        "ThroughputPerSecond": 13667.674726016083,
+        "Ordering": {
+          "Delivered": 20000,
+          "Unique": 20000,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        }
+      }
+    },
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "drain",
+        "Strategy": "pg-skip-locked",
+        "Engine": "PostgreSQL",
+        "Workers": 4,
+        "Producers": 4,
+        "Messages": 20000,
+        "DurationSeconds": 0.36752809999999997,
+        "ThroughputPerSecond": 54417.60779651951,
+        "Ordering": {
+          "Delivered": 20000,
+          "Unique": 20000,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 1742,
+          "AggregatesWithInversion": 64,
+          "LossFree": true,
+          "InOrder": false
+        }
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "drain",
+        "Strategy": "pg-skip-locked",
+        "Engine": "PostgreSQL",
+        "Workers": 4,
+        "Producers": 4,
+        "Messages": 20000,
+        "DurationSeconds": 0.4376479,
+        "ThroughputPerSecond": 45698.836896052744,
+        "Ordering": {
+          "Delivered": 20000,
+          "Unique": 20000,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 1260,
+          "AggregatesWithInversion": 64,
+          "LossFree": true,
+          "InOrder": false
+        }
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "drain",
+        "Strategy": "pg-skip-locked",
+        "Engine": "PostgreSQL",
+        "Workers": 4,
+        "Producers": 4,
+        "Messages": 20000,
+        "DurationSeconds": 0.6792026,
+        "ThroughputPerSecond": 29446.294816892634,
+        "Ordering": {
+          "Delivered": 20000,
+          "Unique": 20000,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 2393,
+          "AggregatesWithInversion": 64,
+          "LossFree": true,
+          "InOrder": false
+        }
+      }
+    },
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "drain",
+        "Strategy": "pg-xmin",
+        "Engine": "PostgreSQL",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 20000,
+        "DurationSeconds": 3.4366727999999998,
+        "ThroughputPerSecond": 5819.582242452642,
+        "Ordering": {
+          "Delivered": 20000,
+          "Unique": 20000,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        }
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "drain",
+        "Strategy": "pg-xmin",
+        "Engine": "PostgreSQL",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 20000,
+        "DurationSeconds": 2.0299624,
+        "ThroughputPerSecond": 9852.399236557289,
+        "Ordering": {
+          "Delivered": 20000,
+          "Unique": 20000,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        }
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "drain",
+        "Strategy": "pg-xmin",
+        "Engine": "PostgreSQL",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 20000,
+        "DurationSeconds": 1.1718727,
+        "ThroughputPerSecond": 17066.700162910187,
+        "Ordering": {
+          "Delivered": 20000,
+          "Unique": 20000,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        }
+      }
+    },
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "drain",
+        "Strategy": "pg-logical",
+        "Engine": "PostgreSQL",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 20000,
+        "DurationSeconds": 0.11396469999999999,
+        "ThroughputPerSecond": 175492.9377254536,
+        "Ordering": {
+          "Delivered": 20000,
+          "Unique": 20000,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        }
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "drain",
+        "Strategy": "pg-logical",
+        "Engine": "PostgreSQL",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 20000,
+        "DurationSeconds": 0.1360835,
+        "ThroughputPerSecond": 146968.58913828642,
+        "Ordering": {
+          "Delivered": 20000,
+          "Unique": 20000,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        }
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "drain",
+        "Strategy": "pg-logical",
+        "Engine": "PostgreSQL",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 20000,
+        "DurationSeconds": 0.1392232,
+        "ThroughputPerSecond": 143654.21854978194,
+        "Ordering": {
+          "Delivered": 20000,
+          "Unique": 20000,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        }
+      }
+    },
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "drain",
+        "Strategy": "ora-skip-locked",
+        "Engine": "Oracle",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 20000,
+        "DurationSeconds": 3.0716897,
+        "ThroughputPerSecond": 6511.074344521193,
+        "Ordering": {
+          "Delivered": 20000,
+          "Unique": 20000,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        }
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "drain",
+        "Strategy": "ora-skip-locked",
+        "Engine": "Oracle",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 20000,
+        "DurationSeconds": 2.4167379999999996,
+        "ThroughputPerSecond": 8275.617795557484,
+        "Ordering": {
+          "Delivered": 20000,
+          "Unique": 20000,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        }
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "drain",
+        "Strategy": "ora-skip-locked",
+        "Engine": "Oracle",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 20000,
+        "DurationSeconds": 2.6433656,
+        "ThroughputPerSecond": 7566.11192942815,
+        "Ordering": {
+          "Delivered": 20000,
+          "Unique": 20000,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        }
+      }
+    },
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "drain",
+        "Strategy": "ora-skip-locked",
+        "Engine": "Oracle",
+        "Workers": 4,
+        "Producers": 4,
+        "Messages": 20000,
+        "DurationSeconds": 1.6427256,
+        "ThroughputPerSecond": 12174.8878814575,
+        "Ordering": {
+          "Delivered": 20000,
+          "Unique": 20000,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 3918,
+          "AggregatesWithInversion": 64,
+          "LossFree": true,
+          "InOrder": false
+        }
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "drain",
+        "Strategy": "ora-skip-locked",
+        "Engine": "Oracle",
+        "Workers": 4,
+        "Producers": 4,
+        "Messages": 20000,
+        "DurationSeconds": 1.3845238999999998,
+        "ThroughputPerSecond": 14445.398884049602,
+        "Ordering": {
+          "Delivered": 20000,
+          "Unique": 20000,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 3871,
+          "AggregatesWithInversion": 64,
+          "LossFree": true,
+          "InOrder": false
+        }
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "drain",
+        "Strategy": "ora-skip-locked",
+        "Engine": "Oracle",
+        "Workers": 4,
+        "Producers": 4,
+        "Messages": 20000,
+        "DurationSeconds": 1.4540111,
+        "ThroughputPerSecond": 13755.053176691705,
+        "Ordering": {
+          "Delivered": 20000,
+          "Unique": 20000,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 3761,
+          "AggregatesWithInversion": 64,
+          "LossFree": true,
+          "InOrder": false
+        }
+      }
+    },
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "drain",
+        "Strategy": "ora-aq",
+        "Engine": "Oracle",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 20000,
+        "DurationSeconds": 2.8148975999999997,
+        "ThroughputPerSecond": 7105.054194511375,
+        "Ordering": {
+          "Delivered": 20000,
+          "Unique": 20000,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        }
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "drain",
+        "Strategy": "ora-aq",
+        "Engine": "Oracle",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 20000,
+        "DurationSeconds": 3.4155299,
+        "ThroughputPerSecond": 5855.60676836704,
+        "Ordering": {
+          "Delivered": 20000,
+          "Unique": 20000,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        }
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "drain",
+        "Strategy": "ora-aq",
+        "Engine": "Oracle",
+        "Workers": 1,
+        "Producers": 4,
+        "Messages": 20000,
+        "DurationSeconds": 4.9046520000000005,
+        "ThroughputPerSecond": 4077.7612764371456,
+        "Ordering": {
+          "Delivered": 20000,
+          "Unique": 20000,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 0,
+          "AggregatesWithInversion": 0,
+          "LossFree": true,
+          "InOrder": true
+        }
+      }
+    },
+    {
+      "Run": 1,
+      "Result": {
+        "Scenario": "drain",
+        "Strategy": "ora-aq",
+        "Engine": "Oracle",
+        "Workers": 4,
+        "Producers": 4,
+        "Messages": 20000,
+        "DurationSeconds": 14.4756479,
+        "ThroughputPerSecond": 1381.6307317063163,
+        "Ordering": {
+          "Delivered": 20000,
+          "Unique": 20000,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 4969,
+          "AggregatesWithInversion": 64,
+          "LossFree": true,
+          "InOrder": false
+        }
+      }
+    },
+    {
+      "Run": 2,
+      "Result": {
+        "Scenario": "drain",
+        "Strategy": "ora-aq",
+        "Engine": "Oracle",
+        "Workers": 4,
+        "Producers": 4,
+        "Messages": 20000,
+        "DurationSeconds": 3.2427239,
+        "ThroughputPerSecond": 6167.654298289163,
+        "Ordering": {
+          "Delivered": 20000,
+          "Unique": 20000,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 4672,
+          "AggregatesWithInversion": 64,
+          "LossFree": true,
+          "InOrder": false
+        }
+      }
+    },
+    {
+      "Run": 3,
+      "Result": {
+        "Scenario": "drain",
+        "Strategy": "ora-aq",
+        "Engine": "Oracle",
+        "Workers": 4,
+        "Producers": 4,
+        "Messages": 20000,
+        "DurationSeconds": 3.9771585,
+        "ThroughputPerSecond": 5028.715853290735,
+        "Ordering": {
+          "Delivered": 20000,
+          "Unique": 20000,
+          "Duplicates": 0,
+          "Missing": 0,
+          "Inversions": 5727,
+          "AggregatesWithInversion": 64,
+          "LossFree": true,
+          "InOrder": false
+        }
+      }
+    }
+  ]
+}
