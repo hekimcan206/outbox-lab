@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>Oracle outbox strategies: FOR UPDATE SKIP LOCKED polling and Advanced Queuing (transactional enqueue, array dequeue).</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Oracle.ManagedDataAccess.Core" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OutboxLab.Core\OutboxLab.Core.csproj" />
+  </ItemGroup>
+
+</Project>
