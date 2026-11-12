@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+    <PackageReference Include="AwesomeAssertions" />
+    <PackageReference Include="Testcontainers.Oracle" />
+    <PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\OutboxLab.Core\OutboxLab.Core.csproj" />
+    <ProjectReference Include="..\..\src\OutboxLab.Oracle\OutboxLab.Oracle.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- The exact init script docker compose mounts, so the privilege model is tested, not assumed. -->
+    <None Include="..\..\deploy\oracle\init\*.sh" Link="oracle-init\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+    <!-- Test classes run one after another; several tests measure timing. -->
+    <Content Include="xunit.runner.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+    <Using Include="AwesomeAssertions" />
+  </ItemGroup>
+
+</Project>
