@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>Engine-neutral outbox model, measurement (latency, ordering, loss) and the scenario engine of outbox-lab.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="OutboxLab.UnitTests" />
+  </ItemGroup>
+
+</Project>
